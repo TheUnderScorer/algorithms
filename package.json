@@ -1,5 +1,9 @@
 {
   "name": "algorithms",
+  "author": {
+    "email": "przemyslawzydek@gmail.com",
+    "name": "Przemysław Żydek"
+  },
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
