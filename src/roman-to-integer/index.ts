@@ -107,7 +107,6 @@ const definitions: Record<string, RomanCharDefinition> = {
   },
 };
 
-// MCMXCIV
 export function romanToInteger(roman: string) {
   return roman.split('').reduce((acc, character, index) => {
     const definition = definitions[character];
