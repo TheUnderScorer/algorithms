@@ -31,15 +31,16 @@ export function integerToRoman(number: number) {
   let result = '';
 
   while (remainingAmount) {
-    for (const record of sortedMapArray) {
-      const index = sortedMapArray.indexOf(record);
+    for (let i = 0; i < sortedMapArray.length; i++) {
+      const record = sortedMapArray[i];
       const [romanChar, value] = record;
-      const nextRecord = sortedMapArray[index + 1];
+      const nextRecord = sortedMapArray[i + 1];
 
       if (value <= remainingAmount || !nextRecord) {
         result += romanChar;
 
         remainingAmount -= value;
+
         break;
       }
     }
