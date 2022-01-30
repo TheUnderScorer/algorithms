@@ -1,8 +1,4 @@
-export interface Node {
-  value: number;
-  left?: Node;
-  right?: Node;
-}
+import { Node } from '../shared.types';
 
 export function invertNode(node?: Node) {
   if (!node) {

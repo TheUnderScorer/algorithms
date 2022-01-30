@@ -1,4 +1,5 @@
-import { invertNode, Node } from './index';
+import { invertNode } from './index';
+import { Node } from '../shared.types';
 
 describe('Invert binary tree', () => {
   interface TestCase {
