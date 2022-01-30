@@ -1,6 +1,6 @@
 import { largestRectangleArea } from '.';
 
-describe('Larget rectangle in histogram', () => {
+describe('Largest rectangle in histogram', () => {
   interface TestCase {
     histogram: number[];
     expected: number;

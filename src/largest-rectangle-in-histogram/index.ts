@@ -1,3 +1,5 @@
+import { last } from '@fxts/core';
+
 export function largestRectangleArea(heights: number[]): number {
   let largestUnits = 0;
 
@@ -8,13 +10,15 @@ export function largestRectangleArea(heights: number[]): number {
   for (let index = 0; index < heightsCopy.length; index++) {
     const value = heightsCopy[index];
 
-    while (stack.length && heightsCopy[stack[stack.length - 1]] > value) {
-      const height = heightsCopy[stack.pop() as number];
+    while (stack.length && heightsCopy[Number(last(stack))] > value) {
+      const height = heightsCopy[Number(stack.pop())];
 
       let length = index;
 
       if (stack.length) {
-        length = index - stack[stack.length - 1] - 1;
+        const lastStackEntry = last(stack);
+
+        length = index - Number(lastStackEntry) - 1;
       }
 
       largestUnits = Math.max(largestUnits, height * length);
