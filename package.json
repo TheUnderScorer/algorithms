@@ -35,6 +35,7 @@
   "dependencies": {
     "@fxts/core": "0.4.2",
     "acorn": "8.7.0",
+    "lodash": "4.17.21",
     "lodash.ismatchwith": "4.4.0",
     "lodash.pick": "4.4.0",
     "lodash.set": "4.3.2"
